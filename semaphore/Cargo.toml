@@ -1,0 +1,11 @@
+[package]
+name = "semaphore"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.27", features = ["full"] }
+console-subscriber = "0.1"
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
