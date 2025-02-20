@@ -1,0 +1,17 @@
+[package]
+name = "test-tokio"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+rustflags = ["--cfg", "tokio_unstable"]
+
+[dependencies]
+tokio = { version = "1.27", features = ["full"] }
+console-subscriber = "0.1"
+anyhow = "1.0"
+chrono = "0.4"
+futures = "0.3"
+tokio-stream = "0.1"
+threadpool = "1.8"
+tracing = "0.1"
