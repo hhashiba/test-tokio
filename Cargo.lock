@@ -1044,10 +1044,13 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "console-subscriber",
+ "envy",
  "futures",
+ "serde",
  "tokio",
  "tokio-stream 0.1.17",
  "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]

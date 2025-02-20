@@ -1,0 +1,15 @@
+[package]
+name = "tokio-stream"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.27", features = ["full"] }
+console-subscriber = "0.1"
+anyhow = "1.0"
+futures = "0.3"
+tokio-stream = "0.1"
+tracing = "0.1"
+envy = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
