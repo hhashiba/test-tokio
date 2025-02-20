@@ -4,7 +4,7 @@ use tokio::{
     sync::Semaphore,
     time::{sleep, Duration as TokioDuration},
 };
-use tracing::error;
+use tracing::{error, info};
 
 const MAX_PERMITS: usize = 4;
 
@@ -21,10 +21,11 @@ async fn main() {
         .with_line_number(true)
         .init();
 
-    semaphore_sorted().await
+    semaphore_unordered().await
 }
 
-async fn semaphore_sorted() {
+async fn semaphore_unordered() {
+    info!("call semaphore_unordered");
     let values = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     let semaphore = Arc::new(Semaphore::new(MAX_PERMITS));
